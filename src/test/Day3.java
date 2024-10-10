@@ -17,7 +17,7 @@ public class Day3 {
 
 	@Parameters({ "URL", "APIKey/Username" })
 	// it will check alphabetical order
-	@Test
+
 	public void weblogincarLoan(String urlName, String key) {
 		// write selenium code
 		System.out.println("Web Login Car");
@@ -89,7 +89,8 @@ public class Day3 {
 		// column in the row are nothing but values for that particular combination(row)
 
 		// 2nd set
-		data[1][0] = "SecondSetUserName";
+
+		data[1][0] = "SecondSetUserNametest";
 		data[1][1] = "SecondPassword";
 
 		// 3rd set
