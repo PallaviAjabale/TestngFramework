@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -17,12 +18,14 @@ public class Day3 {
 
 	@Parameters({ "URL", "APIKey/Username" })
 	// it will check alphabetical order
-
-	public void weblogincarLoan(String urlName, String key) {
+	@Test
+	public void weblogincarLoan(@Optional("carLone.com") String urlName,
+									@Optional("123456") String key) 
+	{
 		// write selenium code
 		System.out.println("Web Login Car");
-		System.out.println(urlName);
-		System.out.println(key);
+		System.out.println("URL: " + urlName);
+		System.out.println("API Key/Username: " + key);
 
 	}
 
